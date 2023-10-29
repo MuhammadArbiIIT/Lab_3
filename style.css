@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lato:ital@1&family=Poppins&display=swap');
+body {
+    background-color: #282828;
+    font-family: "Poppins", "Lato", "Inter";
+}
+
+main {
+    background-color: #3500d3;
+}
+
+.main_container h1, h2 {
+    font-size: 30px;
+    text-align: center;
+}
