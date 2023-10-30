@@ -13,3 +13,26 @@ main {
     background-color: #3500d3;
 }
 
+.main_container {
+    width: 600px; 
+    height: 450px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_container h1, h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.label {
+    display: flex;
+    margin-top: 10px;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
