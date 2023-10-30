@@ -14,14 +14,26 @@ document.addEventListener('DOMContentLoaded', function() {
             tip_percent.textContent = tipSliderValue; 
 
             //math to find out tip amount value and total bill value
-            const tip_amountValue = (billTotalVaue * tipSliderValue) / 100; 
+            const tip_amountValue = (billTotalValue * tipSliderValue) / 100; 
             const totalBillValue = billTotalValue + tip_amountValue; 
 
-            tipAmount.value = tipAmountValue.toFixed(2); 
-            totalBill.value = totalBillValue.toFixed(2);
+            tip_amount.value = tip_amount.toFixed(2); 
+            total_bill.value = totalBillValue.toFixed(2);
             
         });
     }
+//use rangeInput(tip slider) and display the value as well as use it for calculations
+    if (rangeInput) {
+        rangeInput.addEventListener("input", function(event){
+            const tipSliderValue = parseFloat(event.target.value);
+            tip_percent.textContent = tipSliderValue;
 
-    
-  
+            const billTotalValue = parseFloat(textInput.value);
+            const tipAmountValue = (billTotalValue * tipSliderValue) / 100; 
+            const totalBillValue = billTotalValue + tipAmountValue; 
+
+            tip_amount.value = tipAmountValue.toFixed(2);
+            total_bill.value = totalBillValue.toFixed(2);
+        });
+    }
+});
