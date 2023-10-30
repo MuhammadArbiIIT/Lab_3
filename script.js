@@ -10,6 +10,12 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateFields(billTotalValue, tipSliderValue) {
         tip_percent.textContent = tipSliderValue; 
 
+        //check if the value is a number if not provide alert
+        if (isNaN(billTotalValue)) {
+            alert("Please enter a valid number for Bill Total.");
+            return;
+        }
+
         // Math to find out tip amount value and total bill value
         const tip_amountValue = (billTotalValue * tipSliderValue) / 100; 
         const totalBillValue = billTotalValue + tip_amountValue; 
